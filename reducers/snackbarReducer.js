@@ -13,7 +13,7 @@ const snackbarReducer = (state = intialState, action) => {
     case types.SUCCESS_VALIDATE_DATASET:
       return Object.assign({}, state, {
         isOpen: true,
-        message: 'Validering har startet',
+        message: 'La validation a démarré',
         status: types.STATUS_SUCCESS,
         errorMsg: null
       });
@@ -21,7 +21,7 @@ const snackbarReducer = (state = intialState, action) => {
     case types.ERROR_VALIDATE_DATASET:
       return Object.assign({}, state, {
         isOpen: true,
-        message: 'Validering feilet',
+        message: 'Une erreur inattendue s\'est produite',
         status: types.STATUS_ERROR,
         errorMsg: action.payLoad.errorMsg
       });

@@ -78,7 +78,7 @@ class FileUpload extends React.Component {
                 textTransform: 'uppercase'
               }}
             >
-              Last opp nytt datasett
+              Importer de nouvelles données
             </div>
           </div>
           <MdClose
@@ -111,9 +111,8 @@ class FileUpload extends React.Component {
               margin: 'auto'
             }}
           >
-            Slipp filer her, eller klikk her for å velge filer som skal lastes
-            opp som et nytt datasett. Kun filer på formatet zip og rar er
-            støttet.
+            Faites glisser des fichiers ici, ou bien cliquez pour sélectionner les fichiers à télécharger.
+            Seuls les fichiers au format zip et rar sont pris en charge.
           </div>
         </Dropzone>
         <div className="filelist">
@@ -143,7 +142,7 @@ class FileUpload extends React.Component {
                   top: 3
                 }}
               >
-                Datasett er lastet opp
+                Les données sont chargées
               </div>
             </div>
           : null}
@@ -191,12 +190,12 @@ class FileUpload extends React.Component {
               visibility: totalFileSize ? 'visible' : 'hidden'
             }}
           >
-            Total størrelse: {this.formatFileSize(totalFileSize)}
+            Taille totale : {this.formatFileSize(totalFileSize)}
           </div>
           <RaisedButton
             style={{ marginRight: 10 }}
             disabled={!files.length}
-            label="Last opp datasett"
+            label="Importer les données"
             primary={true}
             onClick={() => this.handleUpload()}
           />

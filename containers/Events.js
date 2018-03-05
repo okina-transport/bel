@@ -84,21 +84,21 @@ class Events extends React.Component {
           }}
         >
           <RaisedButton
-            label="Last opp nytt datasett"
+            label="Importer de nouvelles données"
             labelPosition="before"
             primary={true}
             onClick={this.handleUploadFile.bind(this)}
             icon={<Upload />}
           />
           <RaisedButton
-            label="Valider datasett"
+            label="Valider les données"
             primary={true}
             style={{marginLeft: 10}}
             onClick={this.handleShowConfirmValidate.bind(this)}
           />
         </div>
         {events && events.length
-          ? <EventDetails locale="nb" dataSource={events} />
+          ? <EventDetails locale="fr" dataSource={events} />
           : <div
             style={{
               padding: 40,
@@ -107,7 +107,7 @@ class Events extends React.Component {
               fontWeight: 500
             }}
           >
-            Ingen tidligere leveranser.
+            Aucun import de données
           </div>}
           <ConfirmValidateDialog
             open={this.state.confirmDialogOpen}

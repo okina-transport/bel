@@ -9,7 +9,7 @@ class ConfirmDialog extends Component {
 
     const actions = [
       <FlatButton
-        label={"Avbryt"}
+        label={"Annuler"}
         onClick={handleClose}
       />,
       <FlatButton
@@ -22,14 +22,14 @@ class ConfirmDialog extends Component {
     return (
       <Dialog
         actions={actions}
-        title={"Validere datasett"}
+        title={"Valider des données"}
         open={open}
         onRequestClose={() => {
           console.log("Closing dialog")
         }}
       >
         <span>
-          Er du sikker på at du vil validere ditt datasett nå?
+          Voulez-vous lancer la validation des données ?
         </span>
       </Dialog>
     );

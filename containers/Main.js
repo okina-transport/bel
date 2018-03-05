@@ -25,23 +25,24 @@ class Main extends React.Component {
         </div>
       );
     } else {
-      return (
-        <div>
-          <div style={{ marginTop: 20, fontWeight: 600, fontSize: 18 }}>
-            Din bruker er ikke tilknyttet en organisasjon
-          </div>
-          <div>
-            Ta kontakt med din administrator for å rett tilgang til ditt område.
-          </div>
-          <a
-            style={{ cursor: 'pointer' }}
-            onClick={this.handleLogout.bind(this)}
-          >
-            Logg ut
-          </a>
-        </div>
-      );
     }
+    return (
+      <div>
+        <div style={{ marginTop: 20, fontWeight: 600, fontSize: 18 }}>
+          Cet utilisateur n'est affilié à aucune organisation
+        </div>
+        <div>
+          <a href="mailto:rmr@okina.fr
+          ?subject=[RMR] Portail fournisseurs de données : problème d'accès">Contactez votre administrateur pour corriger les droits d'accès.</a>
+        </div>
+        <a
+          style={{ cursor: 'pointer' }}
+          onClick={this.handleLogout.bind(this)}
+        >
+          Se déconnecter
+        </a>
+      </div>
+    );
   }
 }
 

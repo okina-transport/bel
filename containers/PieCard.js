@@ -73,13 +73,13 @@ class PieCard extends React.Component {
         value: valid,
         highlight: color.valid,
         color: color.highlight.valid,
-        label: segmentName('valid', 0, 'nb')
+        label: segmentName('valid', 0, 'fr')
       },
       {
         value: expiring,
         color: color.expiring,
         highlight: color.highlight.expiring,
-        label: segmentName('expiring', 0, 'nb')
+        label: segmentName('expiring', 0, 'fr')
       }
     ];
 
@@ -92,14 +92,14 @@ class PieCard extends React.Component {
         value: length,
         color: segmentColor(numDays),
         highlight: segmentColor(numDays, 20),
-        label: segmentName('dynamic', numDays, 'nb')
+        label: segmentName('dynamic', numDays, 'fr')
       });
     }
     pieData.push({
       value: invalid,
       color: color.invalid,
       highlight: color.highlight.invalid,
-      label: segmentName('invalid', 0, 'nb')
+      label: segmentName('invalid', 0, 'fr')
     });
 
     return (
@@ -120,7 +120,7 @@ class PieCard extends React.Component {
             onClick={() => this.props.handleshowAllClick()}
             style={showAllStyle}
           >
-            Vis alle
+            Tout afficher
           </div>
         </CardText>
       </Card>

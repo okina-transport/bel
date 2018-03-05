@@ -34,7 +34,7 @@ class TabsContainer extends React.Component {
       let clickedSegmentLabel = chart.getSegmentsAtEvent(e)[0].label;
       let clickedSegmentValue = chart.getSegmentsAtEvent(e)[0].value;
 
-      let selected = segmentName2Key(clickedSegmentLabel, 'nb');
+      let selected = segmentName2Key(clickedSegmentLabel, 'fr');
 
       this.setState({
         ...this.state,
@@ -130,7 +130,7 @@ class TabsContainer extends React.Component {
       : 0;
     const all = lineStats.data ? lineStats.data.all.lineNumbers.length : 0;
     const { selectedSegment, daysValid, segmentValue } = this.state;
-    const title = segmentName(selectedSegment, daysValid, 'nb');
+    const title = segmentName(selectedSegment, daysValid, 'fr');
 
     const formattedLastDeliveredDate = [
       {
@@ -149,24 +149,24 @@ class TabsContainer extends React.Component {
         element: valid,
         color: color.valid,
         style: { padding: '2px 0' },
-        title: segmentName('valid', 0, 'nb')
+        title: segmentName('valid', 0, 'fr')
       },
       {
         element: expiring,
         color: color.expiring,
         style: { padding: '2px 0' },
-        title: segmentName('expiring', 0, 'nb')
+        title: segmentName('expiring', 0, 'fr')
       },
       {
         element: invalid,
         color: color.invalid,
         style: { padding: '2px 0' },
-        title: segmentName('invalid', 0, 'nb')
+        title: segmentName('invalid', 0, 'fr')
       }
     ];
     const lineChildren = this.renderCards([
       {
-        title: 'Antall linjer',
+        title: 'Nombre de lignes',
         style: { padding: 0 },
         cardStyle: { backgroundColor: 'white', padding: 0, boxShadow: 'none' },
         children: allLinesChild
@@ -200,11 +200,11 @@ class TabsContainer extends React.Component {
 
     const cardsDataSource = [
       {
-        title: 'dato for siste leveranse',
+        title: 'date de la dernière livraison\n',
         children: formattedLastDeliveredDate
       },
       { children: lines, style: { padding: 0 } },
-      { title: 'Dager til første utgående linje', children: minDays }
+      { title: 'Jours avant la première ligne sortante', children: minDays }
     ];
 
     let cards = this.renderCards(cardsDataSource);
@@ -215,7 +215,7 @@ class TabsContainer extends React.Component {
         onChange={this.handleChange.bind(this)}
         inkBarStyle={{ height: 7, bottom: 5, background: '#FF5959' }}
       >
-        <Tab value="status" label="Linjestatus" style={{ marginTop: 10 }}>
+        <Tab value="status" label="Statut" style={{ marginTop: 10 }}>
           {lineStats.isLoading
             ? <div
                 style={{
@@ -254,7 +254,7 @@ class TabsContainer extends React.Component {
         <Tab
           className="event-header"
           value="events"
-          label="Dataleveranser"
+          label="Envoi de données"
           style={{ marginTop: 10 }}
         >
           {this.state.value === 'events' && <Events />}

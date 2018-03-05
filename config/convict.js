@@ -19,19 +19,19 @@ module.exports = new Promise(function(resolve, reject){
     providersBaseUrl: {
       doc: "Base URL for for Providers API including slash",
       format: "url",
-      default: "https://api-test.entur.org/providers/1.0/",
+      default: "http://localhost:16001/services/providers/",
       env: "PROVIDERS_BASE_URL"
     },
     eventsBaseUrl: {
       doc: "Base URL for for Events API including slash",
       format: "url",
-      default: "https://api-test.entur.org/events/1.0/",
+      default: "http://localhost:9004/services/events/",
       env: "EVENTS_BASE_URL"
     },
     timetableAdminBaseUrl: {
       doc: "Base URL for for Timatable admin API including slash",
       format: "url",
-      default: "https://api-test.entur.org/timetable_admin/1.0/",
+      default: "http://localhost:8888/services/timetable_admin/",
       env: "TIMETABLE_ADMIN_BASE_URL"
     },
     endpointBase: {
@@ -43,7 +43,7 @@ module.exports = new Promise(function(resolve, reject){
     authServerUrl: {
       doc: "URL to keycloak auth server",
       format: String,
-      default: "https://www-test.entur.org/auth",
+      default: "https://auth-rmr.nouvelle-aquitaine.pro/auth",
       env: "AUTH_SERVER_URL"
     },
     chouetteBaseUrl: {

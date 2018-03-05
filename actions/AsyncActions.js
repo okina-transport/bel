@@ -44,6 +44,7 @@ AsyncActions.getProviderStatus = id => dispatch => {
 };
 
 AsyncActions.getProviderEvents = id => dispatch => {
+  debugger;
   const url = `${window.config.eventsBaseUrl}timetable/${id}`;
   dispatch(sendData(null, types.REQUESTED_EVENTS));
   return axios({
@@ -140,7 +141,7 @@ AsyncActions.validateDataSet = providerId => dispatch => {
     .catch((err)=> {
       /* no human-readable error message is given anyway */
       dispatch(sendData({
-        errorMsg: 'En uventet feil har oppstått'
+        errorMsg: 'Une erreur innatendue s\'est produite'
       }, types.ERROR_VALIDATE_DATASET));
     });
 };
@@ -199,20 +200,20 @@ const formatProviderStatusDate = list => {
     .sort((a, b) => a.firstEvent - b.firstEvent)
     .map(listItem => {
       listItem.firstEvent = moment(listItem.firstEvent)
-        .locale('nb')
+        .locale('fr')
         .format('YYYY-MM-DD HH:mm:ss');
       listItem.lastEvent = moment(listItem.lastEvent)
-        .locale('nb')
+        .locale('fr')
         .format('YYYY-MM-DD HH:mm:ss');
       listItem.duration = moment(listItem.durationMillis)
-        .locale('nb')
+        .locale('fr')
         .utc()
         .format('HH:mm:ss');
-      listItem.started = moment(listItem.firstEvent).locale('nb').fromNow();
+      listItem.started = moment(listItem.firstEvent).locale('fr').fromNow();
 
       listItem.events.forEach(function(event) {
         event.date = moment(event.date)
-          .locale('nb')
+          .locale('fr')
           .format('YYYY-MM-DD HH:mm:ss');
         event.actionString = actionNames[event.action];
       });

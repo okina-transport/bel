@@ -48,7 +48,7 @@ class Header extends React.Component {
   render() {
     const { activeSupplier, kc, supplierList } = this.props;
     let title = activeSupplier ? activeSupplier.name : '';
-    let signOut = 'Logg ut ' + kc.tokenParsed.preferred_username;
+    let signOut = 'Déconnecter ' + kc.tokenParsed.preferred_username;
 
     let userOrganisations = roleParser.getUserOrganisations(
       kc.tokenParsed,
@@ -85,7 +85,7 @@ class Header extends React.Component {
                 leftIcon={<MdHelp color={primaryDarker}/>}
                 href="https://rutebanken.atlassian.net/wiki/spaces/PUBLIC/pages/142639123/Brukerveiledning+-+Operat+rportal"
                 target="_blank"
-                primaryText={"Brukerveiledning"}
+                primaryText={"Manuel utilisateur"}
               />
               <MenuItem
                 leftIcon={<MdAccount color={primaryDarker}/>}

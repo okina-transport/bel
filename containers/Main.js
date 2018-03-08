@@ -16,6 +16,7 @@ class Main extends React.Component {
   }
 
   render() {
+
     const { noOrganisations } = this.props;
 
     if (!noOrganisations) {
@@ -32,8 +33,7 @@ class Main extends React.Component {
           Cet utilisateur n'est affilié à aucune organisation
         </div>
         <div>
-          <a href="mailto:rmr@okina.fr
-          ?subject=[RMR] Portail fournisseurs de données : problème d'accès">Contactez votre administrateur pour corriger les droits d'accès.</a>
+          <a href="mailto:rmr@okina.fr?subject=[RMR] Portail fournisseurs de données : problème d'accès">Contactez votre administrateur pour corriger les droits d'accès.</a>
         </div>
         <a
           style={{ cursor: 'pointer' }}

@@ -44,7 +44,6 @@ AsyncActions.getProviderStatus = id => dispatch => {
 };
 
 AsyncActions.getProviderEvents = id => dispatch => {
-  debugger;
   const url = `${window.config.eventsBaseUrl}timetable/${id}`;
   dispatch(sendData(null, types.REQUESTED_EVENTS));
   return axios({

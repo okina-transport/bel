@@ -167,7 +167,7 @@ class FileUpload extends React.Component {
                   top: 3
                 }}
               >
-                Feil ved opplasting av datasett
+                Erreur lors de l'envoi du fichier
               </div>
             </div>
           : null}

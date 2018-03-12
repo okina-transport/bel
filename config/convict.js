@@ -49,7 +49,7 @@ module.exports = new Promise(function(resolve, reject){
     chouetteBaseUrl: {
       doc: "URL to Chouette UI",
       format: String,
-      default: "https://rutedb-test.entur.org/",
+      default: "http://localhost:3000/",
       env: "CHOUETTE_BASE_URL"
     }
   });

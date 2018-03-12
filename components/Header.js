@@ -12,8 +12,8 @@ import Menu from 'material-ui/Menu';
 import { connect } from 'react-redux';
 import AsyncActions from '../actions/AsyncActions';
 import roleParser from '../roles/roleParser';
-import logo from '../static/logo/logo.png';
-import { darkColor, primaryDarker } from '../styles/themes/entur/';
+import logo from '../static/logo/logo_naq.png';
+import { darkColor, primaryDarker } from '../styles/themes/naq/';
 
 class Header extends React.Component {
   constructor(props) {

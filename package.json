@@ -10,7 +10,7 @@
     "test": "./node_modules/.bin/mocha -r jsdom-global/register --compilers js:babel-core/register ./tests/**",
     "prod": "BABEL_ENV=production NODE_ENV=production node server.js",
     "dev": "port=9000 BABEL_ENV=development NODE_ENV=development node server.js",
-    "dev-local": "port=9999 AUTH_SERVER_URL=http://localhost:4685/auth/ CHOUETTE_BASE_URL=http://localhost:3000/ BABEL_ENV=development NODE_ENV=development node $NODE_DEBUG_OPTION server.js"
+    "dev-local": "port=9999 AUTH_SERVER_URL=http://localhost:4685/auth/ BABEL_ENV=development NODE_ENV=development node $NODE_DEBUG_OPTION server.js"
   },
   "author": "Sean Erik Scully",
   "license": "MIT",

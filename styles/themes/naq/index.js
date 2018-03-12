@@ -1,16 +1,16 @@
 import { fade } from 'material-ui/utils/colorManipulator';
 
-export const primary = '#5AC39A';
-export const primaryDarker = '#51af8a';
-export const darkColor = '#181C56';
+export const primary = '#8c8786';
+export const primaryDarker = '#514C4B';
+export const darkColor = '#0F856B';
 const cyan700 = '#5AC39A';
 const grey100 = '#f5f5f5';
 const grey300 = '#e0e0e0';
 const grey400 = '#bdbdbd';
 const grey500 = '#9e9e9e';
 const white = '#ffffff';
-const darkBlack = 'rgba(0, 0, 0, 0.87)';
-const fullBlack = 'rgba(0, 0, 0, 1)';
+const darkBlack = '#181716';
+const fullBlack = '#181716';
 
 export default {
   fontFamily: 'Roboto, sans-serif',

@@ -12,7 +12,7 @@ import Menu from 'material-ui/Menu';
 import { connect } from 'react-redux';
 import AsyncActions from '../actions/AsyncActions';
 import roleParser from '../roles/roleParser';
-import logo from '../static/logo/logo_entur.png';
+import logo from '../static/logo/logo.png';
 import { darkColor, primaryDarker } from '../styles/themes/entur/';
 
 class Header extends React.Component {
@@ -61,7 +61,7 @@ class Header extends React.Component {
           title={
             <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
               <div style={{pointerEvents: 'none'}}>{title}</div>
-              <img src={logo} style={{width: 40, height: 'auto'}}/>
+              <img src={logo} style={{width: 140, height: 'auto'}}/>
             </div>
           }
           showMenuIconButton={true}

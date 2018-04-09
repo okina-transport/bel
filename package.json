@@ -9,9 +9,9 @@
     "start": "node server.js",
     "test": "./node_modules/.bin/mocha -r jsdom-global/register --compilers js:babel-core/register ./tests/**",
     "prod": "BABEL_ENV=production NODE_ENV=production node server.js",
-    "dev": "port=9000 BABEL_ENV=development NODE_ENV=development node server.js",
-    "integ": "port=9000 AUTH_SERVER_URL=https://auth.okina.fr/auth/ BABEL_ENV=production NODE_ENV=production PROVIDERS_BASE_URL=https://baba.na.okina.fr/services/providers/ EVENTS_BASE_URL=http://nabu.na.okina.fr/services/events/ TIMETABLE_ADMIN_BASE_URL=https://marduk.na.okina.fr/services/timetable_admin/ node server.js",
-    "dev-integ-auth": "port=9000 AUTH_SERVER_URL=https://auth.okina.fr/auth/ BABEL_ENV=development BABEL_ENV=development NODE_ENV=development node server.js",
+    "dev": "BABEL_ENV=development NODE_ENV=development node server.js",
+    "integ": "AUTH_SERVER_URL=https://auth.okina.fr/auth/ BABEL_ENV=production NODE_ENV=production PROVIDERS_BASE_URL=https://baba.na.okina.fr/services/providers/ EVENTS_BASE_URL=http://nabu.na.okina.fr/services/events/ TIMETABLE_ADMIN_BASE_URL=https://marduk.na.okina.fr/services/timetable_admin/ node server.js",
+    "dev-integ-auth": "AUTH_SERVER_URL=https://auth.okina.fr/auth/ BABEL_ENV=development BABEL_ENV=development NODE_ENV=development node server.js",
     "dev-local": "port=9999 AUTH_SERVER_URL=http://localhost:4685/auth/ BABEL_ENV=development NODE_ENV=development node $NODE_DEBUG_OPTION server.js"
   },
   "author": "Sean Erik Scully",

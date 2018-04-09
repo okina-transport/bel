@@ -19,19 +19,19 @@ module.exports = new Promise(function(resolve, reject){
     providersBaseUrl: {
       doc: "Base URL for for Providers API including slash",
       format: "url",
-      default: "http://localhost:16001/services/providers/",
+      default: "http://127.0.0.1:16001/services/providers/",
       env: "PROVIDERS_BASE_URL"
     },
     eventsBaseUrl: {
       doc: "Base URL for for Events API including slash",
       format: "url",
-      default: "http://localhost:9004/services/events/",
+      default: "http://127.0.0.1:9004/services/events/",
       env: "EVENTS_BASE_URL"
     },
     timetableAdminBaseUrl: {
       doc: "Base URL for for Timatable admin API including slash",
       format: "url",
-      default: "http://localhost:8888/services/timetable_admin/",
+      default: "http://127.0.0.1:8888/services/timetable_admin/",
       env: "TIMETABLE_ADMIN_BASE_URL"
     },
     endpointBase: {
@@ -49,7 +49,7 @@ module.exports = new Promise(function(resolve, reject){
     chouetteBaseUrl: {
       doc: "URL to Chouette UI",
       format: String,
-      default: "http://localhost:3000/",
+      default: "http://127.0.0.1:3000/",
       env: "CHOUETTE_BASE_URL"
     }
   });

@@ -61,7 +61,7 @@ class Header extends React.Component {
           title={
             <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
               <div style={{pointerEvents: 'none'}}>{title}</div>
-              <img src={logo} style={{width: 140, height: 'auto'}}/>
+              <img src={logo} style={{width: 140, height: 'auto', marginTop:10}}/>
             </div>
           }
           showMenuIconButton={true}
@@ -83,7 +83,7 @@ class Header extends React.Component {
             >
               <MenuItem
                 leftIcon={<MdHelp color={primaryDarker}/>}
-                href="https://rutebanken.atlassian.net/wiki/spaces/PUBLIC/pages/142639123/Brukerveiledning+-+Operat+rportal"
+                href="https://TODO"
                 target="_blank"
                 primaryText={"Manuel utilisateur"}
               />

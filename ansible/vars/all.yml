@@ -1,5 +1,10 @@
 ---
-docker_build_root: /usr/src
-build_log_directory: /usr/src/log
-bel_root: "{{docker_build_root}}/bel"
-bel_docker_image: "eu.gcr.io/carbon-1287/bel"
+image_name: "bel"
+docker_build_root: "/var/lib/jenkins/docker"
+build_home: "/var/lib/jenkins/workspace/Naq-Docker-Bel"
+registry_image_name: "registry.okina.fr/na/{{image_name}}"
+version: "0.8.0"
+
+build_log_directory: "{{docker_build_root}}/logs"
+image_docker_root: "{{docker_build_root}}/{{image_name}}"
+logfile: "{{build_log_directory}}/{{image_name}}.log"

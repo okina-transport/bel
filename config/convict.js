@@ -49,7 +49,7 @@ module.exports = new Promise(function(resolve, reject){
     chouetteBaseUrl: {
       doc: "URL to Chouette UI",
       format: String,
-      default: "https://offre.rmr.okina.fr/",
+      default: "http://127.0.0.1:3000/",
       env: "CHOUETTE_BASE_URL"
     }
   });

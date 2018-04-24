@@ -135,7 +135,7 @@ class TabsContainer extends React.Component {
     const formattedLastDeliveredDate = [
       {
         element: lastDeliveredDate
-          ? moment(lastDeliveredDate).format('YYYY-MM-DD')
+          ? moment(lastDeliveredDate).locale('fr').format('YYYY-MM-DD')
           : 'N/A',
         color: color.font.info2
       }

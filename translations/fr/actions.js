@@ -16,7 +16,7 @@ export default {
     EXPORT: "Export des données de transport",
     VALIDATION_LEVEL_1: "Validation de l'espace de données niveau 1",
     VALIDATION_LEVEL_2: "Validation de l'espace de données niveau 2",
-    DATASPACE_TRANSFER: "Trahnsfert vers l'espace de données central niveau 1",
+    DATASPACE_TRANSFER: "Transfert vers l'espace de données central niveau 1",
     BUILD_GRAPH: "Génération des suggestions d'itinéraires",
     UNKNOWN: "Cette étape n'est pas claire",
   },

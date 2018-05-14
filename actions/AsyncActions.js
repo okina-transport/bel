@@ -208,7 +208,8 @@ const formatProviderStatusDate = list => {
         .locale('fr')
         .utc()
         .format('HH:mm:ss');
-      listItem.started = moment(listItem.firstEvent).locale('fr').fromNow();
+      moment.locale('fr');
+      listItem.started = moment(listItem.firstEvent).fromNow();
 
       listItem.events.forEach(function(event) {
         event.date = moment(event.date)

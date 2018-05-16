@@ -34,9 +34,6 @@ convictConfig
       res.sendFile(__dirname + "/public/bundle.js");
     });
 
-    app.get(ENDPOINTBASE + "public/react.bundle.js", function(req, res) {
-      res.sendFile(__dirname + "/public/react.bundle.js");
-    });
   }
 
   app.get(ENDPOINTBASE + "config.json", function(req, res) {
@@ -113,7 +110,6 @@ convictConfig
   const getBundles = () => {
     if (process.env.NODE_ENV === "production") {
       return `
-        <script src="${ENDPOINTBASE}public/react.bundle.js"></script>
         <script src="${ENDPOINTBASE}public/bundle.js"></script>
       `;
     }

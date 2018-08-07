@@ -6,6 +6,7 @@ import Root from './containers/Root';
 import configureStore from './store/store';
 import cfgreader from './config/readConfig';
 import Keycloak from 'keycloak-js';
+import { browserHistory } from 'react-router';
 
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import './styles/css/main.css';
@@ -42,7 +43,7 @@ const renderIndex = kc =>{
 
   ReactDOM.render(
     <Provider store={store}>
-      <Root />
+      <Root history={browserHistory}/>
     </Provider>,
     document.getElementById('root')
   );

@@ -5,7 +5,6 @@ import IconMenu from 'material-ui/IconMenu';
 import MenuItem from 'material-ui/MenuItem';
 import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
 import MdAccount from 'material-ui/svg-icons/action/account-circle';
-import MdHelp from 'material-ui/svg-icons/action/help';
 import Identity from 'material-ui/svg-icons/action/perm-identity';
 import Popover from 'material-ui/Popover';
 import Menu from 'material-ui/Menu';
@@ -14,6 +13,7 @@ import AsyncActions from '../actions/AsyncActions';
 import roleParser from '../roles/roleParser';
 import logo from '../static/logo/logo_naq.png';
 import { darkColor, primaryDarker } from '../styles/themes/naq/';
+import MdLibraryBooks from 'material-ui/svg-icons/av/library-books';
 
 class Header extends React.Component {
   constructor(props) {
@@ -43,6 +43,10 @@ class Header extends React.Component {
     this.setState({
       open: false
     });
+  }
+
+  goToDocumentaryBase() {
+        this.props.dispatch(UserActions.navigateTo('DocumentaryBase', ''));
   }
 
   render() {
@@ -82,10 +86,11 @@ class Header extends React.Component {
               anchorOrigin={{ horizontal: 'right', vertical: 'top' }}
             >
               <MenuItem
-                leftIcon={<MdHelp color={primaryDarker}/>}
-                href="https://TODO"
-                target="_blank"
-                primaryText={"Manuel utilisateur"}
+                leftIcon={<MdLibraryBooks color={primaryDarker}/>}
+                onClick={() =>
+                    this.goToDocumentaryBase.bind(this)
+                }
+                primaryText={"Base documentaire"}
               />
               <MenuItem
                 leftIcon={<MdAccount color={primaryDarker}/>}

@@ -6,7 +6,8 @@ const intialState = {
     progress: 0,
     state: types.FILE_UPLOAD_NOT_STARTED
   },
-  noOrganisations: false
+  noOrganisations: false,
+  path: '/'
 };
 
 const userReducer = (state = intialState, action) => {
@@ -41,6 +42,11 @@ const userReducer = (state = intialState, action) => {
           state: types.FILE_UPLOAD_UPLOADING
         }
       });
+
+      case types.NAVIGATE_TO:
+          return Object.assign({}, state, {
+              path: action.payLoad
+          });
 
     default:
       return state;

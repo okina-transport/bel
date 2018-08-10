@@ -14,6 +14,7 @@ import roleParser from '../roles/roleParser';
 import logo from '../static/logo/logo_naq.png';
 import { darkColor, primaryDarker } from '../styles/themes/naq/';
 import MdLibraryBooks from 'material-ui/svg-icons/av/library-books';
+import UserActions from '../actions/UserActions';
 
 class Header extends React.Component {
   constructor(props) {
@@ -46,7 +47,7 @@ class Header extends React.Component {
   }
 
   goToDocumentaryBase() {
-        this.props.dispatch(UserActions.navigateTo('DocumentaryBase', ''));
+    this.props.dispatch(UserActions.navigateTo('documentaryBase', ''));
   }
 
   render() {
@@ -87,9 +88,7 @@ class Header extends React.Component {
             >
               <MenuItem
                 leftIcon={<MdLibraryBooks color={primaryDarker}/>}
-                onClick={() =>
-                    this.goToDocumentaryBase.bind(this)
-                }
+                onClick={this.goToDocumentaryBase.bind(this)}
                 primaryText={"Base documentaire"}
               />
               <MenuItem

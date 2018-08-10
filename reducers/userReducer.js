@@ -1,6 +1,6 @@
 import * as types from './../actions/actionTypes';
 
-const intialState = {
+const initialState = {
   isModalOpen: false,
   fileUpload: {
     progress: 0,
@@ -10,7 +10,7 @@ const intialState = {
   path: '/'
 };
 
-const userReducer = (state = intialState, action) => {
+const userReducer = (state = initialState, action) => {
   switch (action.type) {
     case types.DISMISSED_FILEUPLOAD_MODAL:
       return Object.assign({}, state, {
@@ -45,7 +45,7 @@ const userReducer = (state = intialState, action) => {
 
       case types.NAVIGATE_TO:
           return Object.assign({}, state, {
-              path: action.payLoad
+              path: '/documentaryBase'
           });
 
     default:

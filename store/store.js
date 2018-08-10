@@ -4,6 +4,7 @@ import thunkMiddleware from 'redux-thunk';
 import { createLogger } from 'redux-logger';
 import * as reducers from '../reducers';
 import * as types from '../actions/actionTypes';
+import { routerReducer } from 'react-router-redux';
 
 export default function configureStore(kc) {
   const loggerMiddleware = createLogger();
@@ -25,11 +26,13 @@ export default function configureStore(kc) {
         progress: 0,
         state: types.FILE_UPLOAD_NOT_STARTED
       },
-      kc: kc
+      kc: kc,
+      path: '/'
     }
   };
 
   const combinedReducer = combineReducers({
+    routing: routerReducer,
     ...reducers
   });
 

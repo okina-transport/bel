@@ -15,18 +15,17 @@ limitations under the Licence. */
 
 import React from 'react';
 import { Router, Route, IndexRoute } from 'react-router';
-import Header from "../components/Header";
-import FileUpload from "./FileUpload";
-import Main from "./Main";
+import App from "./App";
+import AppDocumentaryBase from "./AppDocumentaryBase";
 
 class RouterContainer extends React.Component {
     render() {
         const { path, history } = this.props;
 
         const routes = (
-            <Route path={"/"} component={Header}>
-                <IndexRoute component={Main}/>
-                <Route path={path + 'documentaryBase'} component={FileUpload} />
+            <Route path={path}>
+                <IndexRoute component={App}/>
+                <Route path={path + 'documentaryBase'} component={AppDocumentaryBase} />
             </Route>
         );
 

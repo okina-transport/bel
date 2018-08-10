@@ -6,6 +6,8 @@ import Root from './containers/Root';
 import configureStore from './store/store';
 import cfgreader from './config/readConfig';
 import Keycloak from 'keycloak-js';
+import { browserHistory } from 'react-router';
+import { syncHistoryWithStore } from 'react-router-redux';
 
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import './styles/css/main.css';
@@ -30,20 +32,21 @@ const authWithKeyCloak = endpointBase => {
           localStorage.setItem('BEL::jwt', kc.token);
         }, 10000);
 
-        renderIndex(kc);
+        renderIndex(kc, config.endpointBase);
       } else {
         kc.login();
       }
     });
-}
+};
 
-const renderIndex = kc =>{
+const renderIndex = (kc, path) =>{
   const store = configureStore(kc);
+  const history = syncHistoryWithStore(browserHistory, store);
 
   ReactDOM.render(
     <Provider store={store}>
-      <Root />
+      <Root path={path} history={history}/>
     </Provider>,
     document.getElementById('root')
   );
-}
+};

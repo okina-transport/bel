@@ -33,8 +33,6 @@ class DocumentBase extends React.Component {
                     <div>
                         <h2>Méthode et organisation</h2>
                         <a href="doc/RMR-GuideMethodo-V2.0.pdf" target="_blank">Guide Méthodologique - 21/06/2018</a>
-                        <br/>
-                        <a href="doc/RMR-PreconnisationsDSP-V3.0.pdf" target="_blank">Préconisations pour les marchés publics DSP - 29/03/2018</a>
                     </div>
                     <br/>
                     <div>
@@ -60,38 +58,11 @@ class DocumentBase extends React.Component {
                         <a href="doc/RMR-WEBINAR-24_04_2018-V2.0.pdf" target="_blank">Webinars “Organisation pour la mise en qualité des données de mobilité” -
                             24/04/2018</a>
                     </div>
-                    <div>
+                    <div style={{marginBottom: 100}}>
                         <h2>Documentation technique informatique</h2>
                         <a href="http://gtfs.org/best-practices/" target="_blank">Spécifications et bonnes pratiques du format GTFS</a>
                         <br/>
                         <a href="http://netex-cen.eu/" target="_blank">Spécifications NeTEx</a>
-                    </div>
-                    <br/>
-                    <div style={{marginBottom: 100}}>
-                        <h1>Suivi de projet</h1>
-                        <a href="doc/RMR-Lancement_de_projet-31_10_2017-V4.2.pdf" target="_blank">Présentation du lancement de projet - 31/10/2017</a>
-                        <br/>
-                        <a href="doc/CRR-Lancement_RMR_Limoges-18_10_2017-V2.2.pdf" target="_blank">Compte rendu de réunion de lancement de projet à Limoges -
-                            18/10/2017</a>
-                        <br/>
-                        <a href="doc/CRR-Lancement_RMR_Poitiers-19_10_2017-V2.2.pdf" target="_blank">Compte rendu de réunion de lancement de projet à Poitiers -
-                            19/10/2017</a>
-                        <br/>
-                        <a href="doc/CRR-Lancement_RMR_Bordeaux-30_10_2017-V2.0.pdf" target="_blank">Compte rendu de réunion de lancement de projet à Bordeaux -
-                            30/10/2017</a>
-                        <br/>
-                        <br/>
-                        <a href="doc/RMR-NA_Restitution_06022018_V2.0.pdf" target="_blank">Présentation du COTECH (Restitution de l’Audit) - 06/02/2018</a>
-                        <br/>
-                        <a href="doc/CRR-NA-RestitutionCOTECH-06_02_2018-V2.3.pdf" target="_blank">Compte rendu de réunion du COTECH (Restitution de l’Audit) -
-                            06/02/2018</a>
-                        <br/>
-                        <a href="doc/RMR-COTECH-18_06_2018_V1.0.pdf" target="_blank">Présentation du COTECH (RMR + SIM) - 18/06/2018</a>
-                        <br/>
-                        <br/>
-                        <a href="doc/CRR-RMRFormation-V1.0.pdf" target="_blank">Compte rendu de formation RMR - 21/06/2018</a>
-                        <br/>
-                        <a href="doc/RMR-FormationRMR-2018-V1.0.pdf" target="_blank">Présentation des formations RMR - 14/05/2018</a>
                     </div>
                 </div>
             </div>

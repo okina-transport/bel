@@ -62,26 +62,6 @@ convictConfig
     res.sendFile(__dirname + "/translations/translations/en/actions.js");
   });
 
-  app.get(ENDPOINTBASE + 'doc/CRR-Lancement_RMR_Bordeaux-30_10_2017-V2.0.pdf', function(req, res) {
-    res.sendFile(__dirname + '/doc/CRR-Lancement_RMR_Bordeaux-30_10_2017-V2.0.pdf');
-  });
-
-  app.get(ENDPOINTBASE + 'doc/CRR-Lancement_RMR_Limoges-18_10_2017-V2.2.pdf', function(req, res) {
-    res.sendFile(__dirname + '/doc/CRR-Lancement_RMR_Limoges-18_10_2017-V2.2.pdf');
-  });
-
-  app.get(ENDPOINTBASE + 'doc/CRR-Lancement_RMR_Poitiers-19_10_2017-V2.2.pdf', function(req, res) {
-    res.sendFile(__dirname + '/doc/CRR-Lancement_RMR_Poitiers-19_10_2017-V2.2.pdf');
-  });
-
-  app.get(ENDPOINTBASE + 'doc/CRR-NA-RestitutionCOTECH-06_02_2018-V2.3.pdf', function(req, res) {
-    res.sendFile(__dirname + '/doc/CRR-NA-RestitutionCOTECH-06_02_2018-V2.3.pdf');
-  });
-
-  app.get(ENDPOINTBASE + 'doc/CRR-RMRFormation-V1.0.pdf', function(req, res) {
-    res.sendFile(__dirname + '/doc/CRR-RMRFormation-V1.0.pdf');
-  });
-
   app.get(ENDPOINTBASE + 'doc/MAN-NA-RMRPA-V3.0.pdf', function(req, res) {
     res.sendFile(__dirname + '/doc/MAN-NA-RMRPA-V3.0.pdf');
   });
@@ -94,28 +74,8 @@ convictConfig
     res.sendFile(__dirname + '/doc/RMR-CharteNommage-V4.0.pdf');
   });
 
-  app.get(ENDPOINTBASE + 'doc/RMR-COTECH-18_06_2018_V1.0.pdf', function(req, res) {
-    res.sendFile(__dirname + '/doc/RMR-COTECH-18_06_2018_V1.0.pdf');
-  });
-
-  app.get(ENDPOINTBASE + 'doc/RMR-FormationRMR-2018-V1.0.pdf', function(req, res) {
-    res.sendFile(__dirname + '/doc/RMR-FormationRMR-2018-V1.0.pdf');
-  });
-
   app.get(ENDPOINTBASE + 'doc/RMR-GuideMethodo-V2.0.pdf', function(req, res) {
     res.sendFile(__dirname + '/doc/RMR-GuideMethodo-V2.0.pdf');
-  });
-
-  app.get(ENDPOINTBASE + 'doc/RMR-Lancement_de_projet-31_10_2017-V4.2.pdf', function(req, res) {
-    res.sendFile(__dirname + '/doc/RMR-Lancement_de_projet-31_10_2017-V4.2.pdf');
-  });
-
-  app.get(ENDPOINTBASE + 'doc/RMR-NA_Restitution_06022018_V2.0.pdf', function(req, res) {
-    res.sendFile(__dirname + '/doc/RMR-NA_Restitution_06022018_V2.0.pdf');
-  });
-
-  app.get(ENDPOINTBASE + 'doc/RMR-PreconnisationsDSP-V3.0.pdf', function(req, res) {
-    res.sendFile(__dirname + '/doc/RMR-PreconnisationsDSP-V3.0.pdf');
   });
 
   app.get(ENDPOINTBASE + 'doc/RMR-WEBINAR-19_12_2017-V1.0.pdf', function(req, res) {

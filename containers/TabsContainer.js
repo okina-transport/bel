@@ -121,6 +121,13 @@ class TabsContainer extends React.Component {
 
   render() {
     const { lineStats, lastDeliveredDate } = this.props;
+    if(lineStats.data != null){
+        for(let i in lineStats.data.validity){
+            if(lineStats.data.validity[i].name !== "EXPIRING" && lineStats.data.validity[i].name !== "INVALID"){
+                lineStats.data.valid.lineNumbers = lineStats.data.validity[i].lineNumbers;
+            }
+        }
+    }
     const valid = lineStats.data ? lineStats.data.valid.lineNumbers.length : 0;
     const invalid = lineStats.data
       ? lineStats.data.invalid.lineNumbers.length

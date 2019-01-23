@@ -40,7 +40,7 @@ class DocumentBase extends React.Component {
                         <h2>Manuels utilisateurs</h2>
                         <a href="doc/MAN-NA-RMRPA-V3.0.pdf" target="_blank">Manuel Utilisateur Référentiel de points d’arrêt</a>
                         <br/>
-                        <a href="doc/MAN-NA-RMRTOPO-V1.0.pdf" target="_blank">Manuel Utilisateur Référentiel Topologie/Horaires</a>
+                        <a href="doc/MAN-NA-RMRTOPO-V1.1.pdf" target="_blank">Manuel Utilisateur Référentiel Topologie/Horaires</a>
                     </div>
                     <div>
                         <h2>Tutoriels et webinars :</h2>

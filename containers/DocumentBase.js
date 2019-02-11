@@ -28,7 +28,7 @@ class DocumentBase extends React.Component {
                     <div style={{marginTop: 25}}>
                         <h1>Accompagnement Fonctionnel</h1>
                         <h2>Charte de nommage</h2>
-                        <a href="doc/RMR-CharteNommage-V4.0.pdf" target="_blank">Charte de Nommage Modalis - 21/06/2018</a>
+                        <a href="doc/RMR-CharteNommage-V5.0.pdf" target="_blank">Charte de Nommage Modalis - 28/01/2019</a>
                     </div>
                     <div>
                         <h2>Méthode et organisation</h2>

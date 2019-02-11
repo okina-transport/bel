@@ -70,8 +70,8 @@ convictConfig
     res.sendFile(__dirname + '/doc/MAN-NA-RMRTOPO-V1.1.pdf');
   });
 
-  app.get(ENDPOINTBASE + 'doc/RMR-CharteNommage-V4.0.pdf', function(req, res) {
-    res.sendFile(__dirname + '/doc/RMR-CharteNommage-V4.0.pdf');
+  app.get(ENDPOINTBASE + 'doc/RMR-CharteNommage-V5.0.pdf', function(req, res) {
+    res.sendFile(__dirname + '/doc/RMR-CharteNommage-V5.0.pdf');
   });
 
   app.get(ENDPOINTBASE + 'doc/RMR-GuideMethodo-V2.0.pdf', function(req, res) {

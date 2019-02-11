@@ -91,7 +91,7 @@ convictConfig
   });
 
   app.get(ENDPOINTBASE + 'doc/WEBINAR_0006_V1.0-Formation_aux_outils_RMR_et_Mise_en_qualite_des_donnees-08-01-2019.pdf', function(req, res) {
-    res.sendFile(__dirname + '/doc/WEBINAR_0006_V1.0-Formation_aux_outils_RMR_et_Mise_en_qualité_des_donnees-08-01-2019.pdf');
+    res.sendFile(__dirname + '/doc/WEBINAR_0006_V1.0-Formation_aux_outils_RMR_et_Mise_en_qualite_des_donnees-08-01-2019.pdf');
   });
 
   app.get(ENDPOINTBASE, function(req, res) {

@@ -117,7 +117,7 @@ convictConfig
 
   const createKeyCloakConfig = authServerUrl => {
     let config = {
-      realm: "Naq",
+      realm: "Mosaic",
       "tokens-not-before": 1490857383,
       "public-client": true,
       "auth-server-url": authServerUrl,

@@ -11,7 +11,7 @@ import Menu from 'material-ui/Menu';
 import { connect } from 'react-redux';
 import AsyncActions from '../actions/AsyncActions';
 import roleParser from '../roles/roleParser';
-import logo from '../static/logo/logo_naq.png';
+import logo from '../static/logo/logo_ratp.png';
 import { darkColor, primaryDarker } from '../styles/themes/naq/';
 import MdLibraryBooks from 'material-ui/svg-icons/av/library-books';
 import UserActions from '../actions/UserActions';

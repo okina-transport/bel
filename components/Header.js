@@ -86,11 +86,11 @@ class Header extends React.Component {
               targetOrigin={{ horizontal: 'right', vertical: 'top' }}
               anchorOrigin={{ horizontal: 'right', vertical: 'top' }}
             >
-              <MenuItem
-                leftIcon={<MdLibraryBooks color={primaryDarker}/>}
-                onClick={this.goToDocumentaryBase.bind(this)}
-                primaryText={"Base documentaire"}
-              />
+              {/*<MenuItem*/}
+              {/*  leftIcon={<MdLibraryBooks color={primaryDarker}/>}*/}
+              {/*  onClick={this.goToDocumentaryBase.bind(this)}*/}
+              {/*  primaryText={"Base documentaire"}*/}
+              {/*/>*/}
               <MenuItem
                 leftIcon={<MdAccount color={primaryDarker}/>}
                 primaryText={signOut}

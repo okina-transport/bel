@@ -13,7 +13,7 @@
     "integ-gfora": "BABEL_ENV=development NODE_ENV=development CHOUETTE_BASE_URL=https://offre.na.okina.fr/ PROVIDERS_BASE_URL=https://api.na.okina.fr/api/providers/1.0/ EVENTS_BASE_URL=https://api.na.okina.fr/api/events/1.0/ TIMETABLE_ADMIN_BASE_URL=https://api.na.okina.fr/api/timetable_admin/1.0/ node server.js",
     "integ": "BABEL_ENV=production NODE_ENV=production CHOUETTE_BASE_URL=https://offre.dev-2.okina.fr/ PROVIDERS_BASE_URL=https://api.dev-2.okina.fr/api/providers/1.0/ EVENTS_BASE_URL=https://api.dev-2.okina.fr/api/events/1.0/ TIMETABLE_ADMIN_BASE_URL=https://api.dev-2.okina.fr/api/timetable_admin/1.0/ node server.js",
     "dev-local": "port=9999 AUTH_SERVER_URL=http://localhost:4685/auth/ BABEL_ENV=development NODE_ENV=development node $NODE_DEBUG_OPTION server.js",
-    "recette-ratpdev": "BABEL_ENV=production NODE_ENV=production CHOUETTE_BASE_URL=https://172.16.1.120:6543/ PROVIDERS_BASE_URL=https://172.16.1.120:16001/ EVENTS_BASE_URL=https://172.16.1.120:9004/ TIMETABLE_ADMIN_BASE_URL=https://172.16.1.120:8888 node server.js"
+    "recette-ratpdev": "BABEL_ENV=production NODE_ENV=production CHOUETTE_BASE_URL=https://172.16.1.120:6543/ PROVIDERS_BASE_URL=https://172.16.1.120:16001/ EVENTS_BASE_URL=https://172.16.1.120:9004/ TIMETABLE_ADMIN_BASE_URL=https://172.16.1.120:8888 AUTH_SERVER_URL=https://172.16.1.120:18080/auth node server.js"
   },
   "author": "Sean Erik Scully",
   "license": "MIT",

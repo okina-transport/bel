@@ -155,9 +155,11 @@ AsyncActions.uploadFiles = files => (dispatch, getState) => {
 
   var data = new FormData();
 
-  files.forEach(file => {
-    data.append('files', file);
-  });
+  // files.forEach(file => {
+  //   data.append('files', file);
+  // });
+
+  data.append('files', files);
 
   const config = {
     onUploadProgress: progressEvent => {
@@ -170,7 +172,7 @@ AsyncActions.uploadFiles = files => (dispatch, getState) => {
   };
 
   return axios
-    .post(url, data, config)
+    .post(url, files, config)
     .then(response => {
       dispatch(
         sendData(

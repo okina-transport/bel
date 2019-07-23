@@ -15,14 +15,18 @@ class FileUpload extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      files: []
+      files: [],
+      user: '',
+      description: ''
     };
   }
 
   closeModal() {
     const { dispatch } = this.props;
     this.setState({
-      files: []
+      files: [],
+      user: '',
+      description: ''
     });
     dispatch(UserActions.dismissFileUploadDialog());
   }
@@ -30,9 +34,9 @@ class FileUpload extends React.Component {
   handleOnDrop(acceptedFiles, user) {
     if (acceptedFiles.length) {
       var arrayFile = Array.from(acceptedFiles);
-      arrayFile[0].user =  user.tokenParsed.preferred_username;
       this.setState({
-          files: arrayFile
+          files: arrayFile,
+          user: user.tokenParsed.preferred_username
       });
     }
   }
@@ -40,7 +44,7 @@ class FileUpload extends React.Component {
   handleUpload() {
     const { dispatch } = this.props;
     const { files } = this.state;
-    if (files && files.length) dispatch(AsyncActions.uploadFiles(files));
+    if (files && files.length) dispatch(AsyncActions.uploadFiles(this.state));
   }
 
   formatFileSize(size) {
@@ -51,16 +55,14 @@ class FileUpload extends React.Component {
   }
 
   handleDescription(description){
-      let file = this.state.files[0];
-      file.description = description;
       this.setState({
-        file: file
+        description: description
       });
   }
 
   render() {
     const { isModalOpen, fileUpload, kc } = this.props;
-    const { files } = this.state;
+    const { files, user, description } = this.state;
     const { progress, state } = fileUpload;
 
     const totalFileSize = files.length

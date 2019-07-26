@@ -25,6 +25,12 @@ module.exports = {
         'NODE_ENV': JSON.stringify('production'),
         'BABEL_ENV': JSON.stringify('production'),
         'VERSION': JSON.stringify(require('./package.json').version),
+        'AUTH_SERVER_URL': JSON.stringify(process.env.AUTH_SERVER_URL),
+        'CHOUETTE_BASE_URL': JSON.stringify(process.env.CHOUETTE_BASE_URL),
+        'PROVIDERS_BASE_URL': JSON.stringify(process.env.PROVIDERS_BASE_URL), // Baba
+        'ORGANISATIONS_BASE_URL': JSON.stringify(process.env.ORGANISATIONS_BASE_URL), // Baba
+        'EVENTS_BASE_URL': JSON.stringify(process.env.EVENTS_BASE_URL), // Nabu
+        'TIMETABLE_ADMIN_BASE_URL': JSON.stringify(process.env.TIMETABLE_ADMIN_BASE_URL), // Marduk
       }
     })
   ],

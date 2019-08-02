@@ -21,6 +21,19 @@ const getConfig = () => {
   return config;
 };
 
+const getConfigMultipart = () => {
+  let config = {};
+  let token = localStorage.getItem('BEL::jwt');
+
+  config.headers = {
+    // 'Content-Type': 'multipart/form-data',
+    // Accept: 'multipart/form-data',
+    Authorization: 'Bearer ' + token
+  };
+
+  return config;
+};
+
 AsyncActions.getProviderStatus = id => dispatch => {
   const url = `${window.config.eventsBaseUrl}timetable/${id}`;
   dispatch(sendData(null, types.REQUESTED_EVENTS));
@@ -159,7 +172,10 @@ AsyncActions.uploadFiles = files => (dispatch, getState) => {
   //   data.append('files', file);
   // });
 
-  data.append('files', files);
+  data.append('files', files.files[0]);
+  data.append('user', files.user);
+  data.append('description', files.description);
+
 
   const config = {
     onUploadProgress: progressEvent => {
@@ -168,11 +184,11 @@ AsyncActions.uploadFiles = files => (dispatch, getState) => {
         sendData(percentCompleted, types.UPDATED_FILE_UPLOAD_PROGRESS_BAR)
       );
     },
-    ...getConfig()
+    ...getConfigMultipart()
   };
 
   return axios
-    .post(url, files, config)
+    .post(url, data, config)
     .then(response => {
       dispatch(
         sendData(

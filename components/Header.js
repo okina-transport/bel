@@ -5,6 +5,9 @@ import IconMenu from 'material-ui/IconMenu';
 import MenuItem from 'material-ui/MenuItem';
 import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
 import MdAccount from 'material-ui/svg-icons/action/account-circle';
+import MdLocalOffer from 'material-ui/svg-icons/maps/local-offer';
+import MdSupervisorAccount from 'material-ui/svg-icons/action/supervisor-account';
+import MdRoom from 'material-ui/svg-icons/action/room';
 import Identity from 'material-ui/svg-icons/action/perm-identity';
 import Popover from 'material-ui/Popover';
 import Menu from 'material-ui/Menu';
@@ -91,11 +94,29 @@ class Header extends React.Component {
               {/*  onClick={this.goToDocumentaryBase.bind(this)}*/}
               {/*  primaryText={"Base documentaire"}*/}
               {/*/>*/}
-              <MenuItem
-                leftIcon={<MdAccount color={primaryDarker}/>}
-                primaryText={signOut}
-                onClick={() => kc.logout()}
-              />
+                <MenuItem
+                    leftIcon={<MdSupervisorAccount color={primaryDarker}/>}
+                    primaryText={'Portail administration'}
+                    href="/admin"
+                    target="_blank"
+                />
+                <MenuItem
+                    leftIcon={<MdLocalOffer color={primaryDarker}/>}
+                    primaryText={'Portail offre'}
+                    href="/offre"
+                    target="_blank"
+                />
+                <MenuItem
+                    leftIcon={<MdRoom color={primaryDarker}/>}
+                    primaryText={'Référentiel arrêts'}
+                    href="/arrets"
+                    target="_blank"
+                />
+                <MenuItem
+                    leftIcon={<MdAccount color={primaryDarker}/>}
+                    primaryText={signOut}
+                    onClick={() => kc.logout()}
+                />
             </IconMenu>
           }
         />

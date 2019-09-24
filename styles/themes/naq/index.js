@@ -2,7 +2,7 @@ import { fade } from 'material-ui/utils/colorManipulator';
 
 export const primary = '#8c8786';
 export const primaryDarker = '#514C4B';
-export const darkColor = '#0F856B';
+export const darkColor = '#DA5C05';
 const cyan700 = '#5AC39A';
 const grey100 = '#f5f5f5';
 const grey300 = '#e0e0e0';

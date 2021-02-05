@@ -54,6 +54,14 @@ const asyncReducer = (state = initialState, action) => {
         dataDelivery: { date: action.payLoad.date, state: action.payLoad.state }
       });
 
+    case types.ADD_NOTIFICATION:
+      return Object.assign({}, state, {
+        notification: {
+          message: action.message,
+          level: action.level
+        }
+      });
+
     default:
       return state;
   }

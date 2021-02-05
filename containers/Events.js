@@ -69,6 +69,16 @@ class Events extends React.Component {
     dispatch(AsyncActions.validateDataSet(currentSupplierId));
   }
 
+  handleCleanDataspace = () => {
+    const response = confirm(
+        'Etes-vous sûr de vouloir vider l\'espace de données ?'
+    );
+    if (response == true) {
+      const { dispatch } = this.props;
+      dispatch(UserActions.cleanDataspace(this.props.currentSupplierId));
+    }
+  };
+
   render() {
     const { events } = this.props;
 
@@ -95,6 +105,12 @@ class Events extends React.Component {
             primary={true}
             style={{marginLeft: 10}}
             onClick={this.handleShowConfirmValidate.bind(this)}
+          />
+          <RaisedButton
+              label="Vider l'espace de données"
+              primary={true}
+              style={{marginLeft: 10}}
+              onClick={this.handleCleanDataspace}
           />
         </div>
         {events && events.length

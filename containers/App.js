@@ -20,6 +20,7 @@ import SnackbarWrapper from '../components/SnackbarWrapper';
 import Main from './Main';
 import enturTheme from '../styles/themes/naq/';
 import FileUpload from './FileUpload';
+import NotificationContainer from './NotificationContainer'
 
 
 class App extends React.Component {
@@ -34,6 +35,7 @@ class App extends React.Component {
                     <Main />
                     <FileUpload />
                     <SnackbarWrapper/>
+                    <NotificationContainer/>
                 </div>
             </MuiThemeProvider>
         );

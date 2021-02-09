@@ -1,4 +1,4 @@
-FROM node:6.3
+FROM node:8.16.2
 # https://hub.docker.com/_/node/
 
 
@@ -16,7 +16,7 @@ ENV port 8000
 
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
-COPY source/ .
+COPY . .
 RUN npm install
 RUN npm run build
 
